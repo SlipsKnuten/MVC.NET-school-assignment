@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index4";
+}
+
+<h2>Sök efter Alien</h2>
+<form method="post" action="@Url.Action("SearchAlien", "Page4")">
+    <label>
+        Namn
+        <input type="text" name="namn" value="" placeholder="Sök på namn" />
+    </label>
+    <input type="submit" value="Search" />
+</form>

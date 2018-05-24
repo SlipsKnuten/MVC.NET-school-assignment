@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index3";
+}
+
+<form method="post" action="@Url.Action("UpdateAlien", "Page3")">
+
+    <fieldset class="form-group">
+        <label for="pnr" class="control-label">ID</label>
+        <input type="text" id="id" name="id" class="form-control" />
+    </fieldset>
+    
+    <fieldset class="form-group">
+        <label for="namn" class="control-label">Namn</label>
+        <input type="text" id="namn" name="namn" class="form-control" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="rasnamn" class="control-label">Rasnamn</label>
+        <input type="text" id="rasnamn" name="rasnamn" class="form-control" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="farlighetsgrad" class="control-label">Farlighetsgrad</label>
+        <input type="text" id="farlighetsgrad" name="farlighetsgrad" class="form-control" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="pnr" class="control-label">Personnummer</label>
+        <input type="text" id="pnr" name="pnr" class="form-control" />
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+
+</form>
+
+
+@Html.ActionLink("Link back home", "Index", "Home")
+

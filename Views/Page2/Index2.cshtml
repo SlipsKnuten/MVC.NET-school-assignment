@@ -1,0 +1,40 @@
+﻿@using a15gusbe.Models;
+@using System.Data;
+
+@{
+    ViewBag.Title = "Page2";
+}
+<h2>Insert page</h2>
+
+
+<form method="post" action="@Url.Action("InsertAlien", "Page2")">
+
+    <fieldset class="form-group">
+        <label for="namn" class="control-label">Namn</label>
+        <input type="text" id="namn" name="namn" class="form-control" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="rasnamn" class="control-label">Rasnamn</label>
+        <input type="text" id="rasnamn" name="rasnamn" class="form-control" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="farlighetsgrad" class="control-label">Farlighetsgrad</label>
+        <input type="text" id="farlighetsgrad" name="farlighetsgrad" class="form-control" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="pnr" class="control-label">Personnummer</label>
+        <input type="text" id="pnr" name="pnr" class="form-control" />
+    </fieldset>
+
+    <input type="hidden" value="" name="id" />
+
+    <button type="submit" class="btn btn-primary">Add</button>
+
+</form>
+
+
+@Html.ActionLink("Link back home", "Index", "Home")
+   

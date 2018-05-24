@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Remove alien</h2>
+<form method="post" action="@Url.Action("LoggAlien", "Page5")">
+    <label>
+        Name:
+        <input type="text" name="id" value="" placeholder="Type in id" />
+    </label>
+    <input type="submit" value="Remove" />
+</form>

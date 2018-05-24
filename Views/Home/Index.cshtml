@@ -1,0 +1,39 @@
+﻿@using a15gusbe.Models;
+@using System.Data
+@{
+    ViewBag.Title = "Aliens";
+}
+
+<h2>Aliens</h2>
+@{
+    DataTable AllAliensTable = ViewBag.AllStudentsTable;
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            @foreach (DataColumn column in ViewBag.AllAliensTable.Columns)
+            {
+                <th>@column.ColumnName</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in ViewBag.AllAliensTable.Rows)
+        {
+            <tr>
+                @for (int i = 0; i < ViewBag.AllAliensTable.Columns.Count; ++i)
+                {
+                    <td>@row[i]</td>
+                }
+                <td>@Html.ActionLink("Delete", "DeleteAlien", "Home", new { id = row.Field<int>("id") }, new { hidefocus = "hidefocus" })</td>             
+            </tr>
+        }
+    </tbody>  
+</table>
+
+<!--<a href="<%= Url.Action(" Index2", "Page2" ) class="btn btn-primary btn-lg active" role="button" aria-pressed="true"%></a>-->
+
+@Html.ActionLink("Link to insert page", "Index2", "Page2")</br>
+@Html.ActionLink("Link to update page", "Index3", "Page3")</br>
+@Html.ActionLink("Link to search page", "Index4", "Page4")</br>
+@Html.ActionLink("Link to delete page", "Index6", "Page5")</br>
